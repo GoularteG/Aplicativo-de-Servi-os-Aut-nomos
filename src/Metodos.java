@@ -39,6 +39,7 @@ public class Metodos {
         System.out.println("---------------------------------------");
         System.out.println("Qual seu email para login: ");
         var emailCliente = sc.nextLine();
+        System.out.println("---------------------------------------");
         System.out.println("Descreva o tipo de trabalho procurado: ");
         var descDoDesejo = sc.nextLine();
         // adicionando cliente na lista
@@ -46,9 +47,14 @@ public class Metodos {
         // metodo para agendar
         agendar(sc);
         System.out.println("---------------------------------------");
-        System.out.println("Gostaria de criar um serviço? (s/n) ");
-        var ler= sc.nextLine();
-        if (ler== "s") {
+        sc.nextLine();
+        System.out.println("Gostaria de criar um serviço?");
+        System.out.println("""
+                1 - Sim
+                2 - Não
+                """);
+        var ler= sc.nextInt();
+        if (ler== 1)  {
             //metodo para criar serviço
             menuServicosC(sc);
             System.out.println("---------------------------------------");
